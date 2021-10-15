@@ -1,0 +1,31 @@
+@import "../variables.scss";
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 16px 24px;
+  background: linear-gradient(to right, #{$primary} 25%, #{$primary-light} 40%, #{$primary-light} 50%, #{$primary} 75%);
+  background-size: 200% auto;
+  animation: shine 6s linear infinite;
+  height: 100px;
+  .header-inner-wrapper {
+    width: 100%;
+    max-width: 1366px;
+    margin: 0 auto;
+    h1 {
+      margin: 0;
+      padding: 8px 0;
+      text-transform: uppercase;
+    }
+    .animated-title {
+      color: $white;
+    }
+  }
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
